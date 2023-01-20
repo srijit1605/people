@@ -1,38 +1,104 @@
-.App {
+.container {
+  padding: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.gallery-style {
+  max-width: 100%;
+  height: 350px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: Left;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 20px;
+}
+
+.gallery-style:hover .card-style {
+  opacity: 0.3;
+}
+
+.gallery-style .card-style:hover {
+  transform: perspective(800px) rotateY(0deg);
+  opacity: 1;
+}
+
+.card-style {
+  width: 23%;
+  min-width: 235px;
+  height: 100%;
+  margin:  20px 0 55px 0;
+  background: linear-gradient(red, blue, #0004);
+  border-radius: 5px;
+  object-fit: cover;
+  overflow: hidden;
+  -webkit-box-reflect: below 2px
+    linear-gradient(transparent, transparent, #0004);
+  transform-origin: center;
+  transform: perspective(800px) rotateY(25deg);
+  transition: 0.5s;
+}
+
+.blur-hover {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  padding-bottom: 5px;
+  background-color: #22222299;
+  backdrop-filter: blur(5px);
+}
+
+.name-style-switch {
   color: white;
+  font-weight: 600;
+  padding: 3px 7px 3px 7px;
+  background-color: rgba(210, 105, 30, 0.616);
+  border-radius: 5px;
+  font-size: 22px;
+  filter: drop-shadow(2px 2px 3px #000);
 }
 
-.App-link {
-  color: #61dafb;
+.other-style-switch {
+  display: none;
+  color: white;
+  font-weight: 600;
+  text-align: left;
+  padding: 0 0 2px 5%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-style:hover .other-style-switch,
+.card-style:focus .other-style-switch,
+.card-style:active .other-style-switch{
+  display: block;
+  filter: drop-shadow(2px 2px 3px #000000aa);
+}
+
+.numbering {
+  color: white;
+  font-weight: 600;
+  font-size: 22px;
+  background-color: chocolate;
+  border-radius: 5px;
+  padding: 3px 12px 3px 7px;
+  filter: drop-shadow(2px 2px 3px #000);
+}
+
+.img-align-style {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.image-style-switch {
+  display: none;
+  color: white;
+  font-weight: 600;
+  text-align: left;
+  padding: 0 0 2px 0;
+  filter: drop-shadow(2px 2px 3px #000000aa);
+}
+
+.card-style:hover .image-style-switch,
+.card-style:focus .image-style-switch,
+.card-style:active .image-style-switch{
+  display: block;
 }
