@@ -36,7 +36,6 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        <Navbar />
         <UserContext.Provider
           value={{
             index,
@@ -57,6 +56,7 @@ function App() {
             setCountry,
           }}
         >
+          <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/add-people" element={<AddPeople />} />

@@ -87,6 +87,12 @@
   }
 }
 
+@media screen and (max-width: 350px) {
+  .form-alignment {
+    transform: scale(0.9);
+  }
+}
+
 .input-alignment {
   margin: 10px 5px;
 }
